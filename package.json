@@ -1,0 +1,31 @@
+{
+  "name": "@typeservice/koa",
+  "version": "1.0.0",
+  "description": "It is a KOA-based service architecture that is fully compatible with all KOA ecosystems.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typeservice/koa.git"
+  },
+  "scripts": {
+    "dev": "ts-node test/index.ts",
+    "build": "rm -rf dist/ && tsc -d"
+  },
+  "keywords": [
+    "template",
+    "nelts"
+  ],
+  "author": "cevio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/typeservice/koa/issues"
+  },
+  "homepage": "https://github.com/typeservice/koa#readme",
+  "dependencies": {
+    "@typeservice/core": "^1.0.1",
+    "koa": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.49"
+  }
+}
