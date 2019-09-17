@@ -1,6 +1,6 @@
 # @typeservice/koa
 
-It is a KOA-based service architecture that is fully compatible with all KOA ecosystems, while providing dynamic Agent assistance processes and IPC communication mechanisms.s
+It is a KOA-based service architecture that is fully compatible with all KOA ecosystems, while providing dynamic Agent assistance processes and IPC communication mechanisms.
 
 ## Installing
 
@@ -17,7 +17,7 @@ import Koa, { Context } from '@typeservice/koa';
 interface CustomContext extends Context {
   abc: number
 }
-const app = new Koa(9000);
+const app = new Koa<any, CustomContext>(9000);
 app.use(async (ctx, next) => {
   ctx.abc = 789;
   await next();
