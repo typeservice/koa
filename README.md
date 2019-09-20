@@ -28,6 +28,7 @@ app.use(async (ctx, next) => {
   ctx.body = 'hello world, ' + ctx.abc;
   await next();
 });
+app.httpBootstrap();
 app.listen();
 ```
 
@@ -39,6 +40,7 @@ app.use(async (ctx, next) => {
   ctx.abc = await ctx.messager.invoke('xxxx', 'xxxx', 'xxxx');
   await next();
 });
+app.httpBootstrap();
 app.listen();
 ```
 
