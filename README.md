@@ -1,5 +1,7 @@
 # @typeservice/koa
 
+[![codecov](https://codecov.io/gh/typeservice/koa/branch/master/graph/badge.svg)](https://codecov.io/gh/typeservice/koa)
+
 It is a KOA-based service architecture that is fully compatible with all KOA ecosystems, while providing dynamic Agent assistance processes and IPC communication mechanisms.
 
 ## Installing
