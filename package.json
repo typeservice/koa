@@ -1,6 +1,6 @@
 {
   "name": "@typeservice/koa",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "It is a KOA-based service architecture that is fully compatible with all KOA ecosystems.",
   "main": "dist/index.js",
   "repository": {

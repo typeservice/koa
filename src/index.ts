@@ -10,13 +10,13 @@ type InspectorBootstrapCallback =
   (callback: (req: IncomingMessage, res: ServerResponse) => void) 
     => http.Server | http2.Http2Server;
 
-export interface Context extends Koa.Context {
+export interface Context {
   messager: Messager;
   logger: Logger;
 }
 
 export default class KoaService<StateT = any, CustomT = {}> extends WorkerFactory {
-  public readonly app: Koa<StateT, CustomT>;
+  public readonly app: Koa<StateT, CustomT & Context>;
   private server: http.Server | http2.Http2Server;
   private callback: InspectorBootstrapCallback;
   private closed: boolean = true;
