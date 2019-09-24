@@ -15,7 +15,7 @@ export interface Context extends Koa.Context {
   logger: Logger;
 }
 
-export default class KoaService<StateT = any, CustomT extends Context = Context> extends WorkerFactory {
+export default class KoaService<StateT = any, CustomT = {}> extends WorkerFactory {
   public readonly app: Koa<StateT, CustomT>;
   private server: http.Server | http2.Http2Server;
   private callback: InspectorBootstrapCallback;
