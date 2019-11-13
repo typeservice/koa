@@ -66,10 +66,11 @@ export default class KoaService<StateT = any, CustomT = {}> extends WorkerFactor
 
   bootstrap(fn: InspectorBootstrapCallback) {
     this.callback = fn;
+    return this;
   }
 
   httpBootstrap(fn?: (server: http.Server) => void) {
-    this.bootstrap(callback => {
+    return this.bootstrap(callback => {
       const server = http.createServer(callback);
       fn && fn(server);
       return server;
@@ -78,7 +79,7 @@ export default class KoaService<StateT = any, CustomT = {}> extends WorkerFactor
 
   /* istanbul ignore next */
   http2Bootstrap(fn?: (server: http2.Http2Server) => void) {
-    this.bootstrap(callback => {
+    return this.bootstrap(callback => {
       const server = http2.createServer(callback);
       fn && fn(server);
       return server;
